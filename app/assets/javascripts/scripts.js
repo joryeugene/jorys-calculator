@@ -100,7 +100,6 @@ function persistExpression(expression) {
         type: "get",
         data: {expression: expression},
         success: function (response) {
-            getExpressions();
         },
         error: function (xhr) {
             console.log("Failed persistExpression");
@@ -108,25 +107,29 @@ function persistExpression(expression) {
     });
 }
 
-function getExpressions() {
-    $.ajax({
-        url: "/get-expressions",
-        type: "get",
-        success: function (response) {
-            results.innerHTML = "";
+function initWS() {
+    var socket = new WebSocket("ws://localhost:9000/get-expressions"),
+        container = $("#container");
+    socket.onopen = function() {
+        console.log("Socket open");
+    };
+    socket.onmessage = function (e) {
+        var expressions = JSON.parse(e.data);
 
-            $.each(response, function (i) {
-                $('<li/>')
-                    .text(response[i])
-                    .appendTo(results);
-            });
-        },
-        error: function (xhr) {
-            console.log("Failed getExpressions");
-        }
-    });
+        results.innerHTML = "";
+
+        $.each(expressions, function (i) {
+            $('<li/>')
+                .text(expressions[i])
+                .appendTo(results);
+        });
+    };
+    socket.onclose = function () {
+        console.log("Socket closed");
+    };
+    return socket;
 }
 
-getExpressions();
+initWS();
 
 /* jshint ignore:end */
