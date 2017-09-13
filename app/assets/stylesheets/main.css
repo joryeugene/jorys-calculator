@@ -1,62 +1,58 @@
 body {
-    width: 500px;
-    margin: 4% auto;
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 5px;
     font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin: 4% auto;
+    width: 500px;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
 
 .calculator {
-    padding: 20px;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 1px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .input {
     border: 1px solid #ddd;
     border-radius: 1px;
+    font-size: 2.5rem;
     height: 60px;
+    margin-right: 6px;
+    overflow-x: auto;
     padding-right: 15px;
     padding-top: 10px;
     text-align: right;
-    margin-right: 6px;
-    font-size: 2.5rem;
-    overflow-x: auto;
     transition: all .2s ease-in-out;
 }
 
 .input:hover {
     border: 1px solid #bbb;
-    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
-.buttons {}
-
-.operators {}
-
 .operators div {
-    display: inline-block;
+    background-color: #ddd;
     border: 1px solid #bbb;
     border-radius: 1px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 20px 4px 10px 0;
     cursor: pointer;
-    background-color: #ddd;
+    display: inline-block;
+    margin: 20px 4px 10px 0;
+    padding: 10px;
+    text-align: center;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    width: 80px;
 }
 
 .operators div:hover {
     background-color: #ddd;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-color: #aaa;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .operators div:active {
@@ -68,23 +64,23 @@ body {
 }
 
 .numbers div {
-    display: inline-block;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 1px;
-    width: 80px;
-    text-align: center;
-    padding: 10px;
-    margin: 10px 4px 10px 0;
     cursor: pointer;
-    background-color: #f9f9f9;
+    display: inline-block;
+    margin: 10px 4px 10px 0;
+    padding: 10px;
+    text-align: center;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    width: 80px;
 }
 
 .numbers div:hover {
     background-color: #f1f1f1;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-color: #bbb;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .numbers div:active {
@@ -92,25 +88,25 @@ body {
 }
 
 div.equalsBtn {
-    display: inline-block;
+    background-color: #4d90fe;
     border: 1px solid #3079ED;
     border-radius: 1px;
-    width: 17%;
-    text-align: center;
-    padding: 127px 10px;
-    margin: 10px 6px 10px 0;
-    vertical-align: top;
-    cursor: pointer;
     color: #FFF;
-    background-color: #4d90fe;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 6px 10px 0;
+    padding: 127px 10px;
+    text-align: center;
     transition: all .2s ease-in-out;
+    vertical-align: top;
+    width: 17%;
 }
 
 div.equalsBtn:hover {
     background-color: #307CF9;
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-color: #1857BB;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 div.equalsBtn:active {
