@@ -1,0 +1,26 @@
+@(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jory's Calculator</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.ico")">
+    </head>
+    <body>
+
+        <section>
+            <div>
+                @content
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="http://cdn.intercoolerjs.org/intercooler-1.1.2.min.js"></script>
+        <script src="@routes.Assets.versioned("javascripts/scripts.js")" type="text/javascript"></script>
+        <script data-main="/javascripts/main.js"></script>
+    </body>
+</html>

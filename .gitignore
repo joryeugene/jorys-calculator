@@ -1,0 +1,15 @@
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+.DS_Store
+app/.DS_Store
+app/assets/.DS_Store
+app/assets/javascripts/.DS_Store
+public/.DS_Store
+public/javascripts/.DS_Store
+conf/application.conf
