@@ -1,6 +1,6 @@
 name := "jorys-calculator"
 
-version := "1.02"
+version := "1.01"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
