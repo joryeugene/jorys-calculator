@@ -107,8 +107,13 @@ function persistExpression(expression) {
     });
 }
 
+function createWebSocket(path) {
+    var protocolPrefix = (window.location.protocol === 'https:') ? 'wss:' : 'ws:';
+    return new WebSocket(protocolPrefix + '//' + location.host + path);
+}
+
 function initWS() {
-    var socket = new WebSocket("ws://localhost:9000/get-expressions"),
+    var socket = createWebSocket("/get-expressions"),
         container = $("#container");
     socket.onopen = function() {
         console.log("Socket open");
