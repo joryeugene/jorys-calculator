@@ -12,4 +12,4 @@ app/assets/.DS_Store
 app/assets/javascripts/.DS_Store
 public/.DS_Store
 public/javascripts/.DS_Store
-conf/application.conf
+#conf/application.conf

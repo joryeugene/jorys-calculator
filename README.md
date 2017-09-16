@@ -50,8 +50,3 @@ Replace the curly braces with the version number noted in the **TAG** column bef
 
 ***
 
-#### TODOS:
-1. -
-
-#### STRETCH:
-* -
